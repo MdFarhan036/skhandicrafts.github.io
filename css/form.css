@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: #f0ebde;
+    padding: 0 10px;
+    background: url(../static/3588.png);
+}
+
+
+/*--------------------------------------------------------------
+# Nav Bar
+--------------------------------------------------------------*/
+
+.navbar {
+    background: #95e2f9e8 !important;
+    border-bottom: 1px solid #ddd;
+    padding: 30px;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.nav-content {
+    position: relative;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.navbar-brand {
+    padding-left: 5rem;
+}
+
+.navbar-brand img {
+    height: 5rem;
+    width: 5rem;
+}
+
+.nav-item .nav-link.active {
+    color: var(--color-base) !important;
+}
+
+.navbar .nav-item:hover .nav-link {
+    color: var(--color-base) !important;
+}
+
+.main-menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+nav ul li {
+    font-weight: 600;
+    display: block;
+    padding: 0 0.6rem;
+    font-size: 15px;
+    text-align: center;
+    list-style: none;
+}
+
+nav ul li a {
+    color: #1d113e !important;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    -webkit-transition: color 0.4s ease;
+    -o-transition: color 0.4s ease;
+    transition: color 0.4s ease;
+}
+
+nav ul li a:hover {
+    transform: scale(1.1);
+}
+
+nav ul li ul {
+    color: #736e81 !important;
+    margin-top: 0;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    transform: scaleY(0);
+    transform-origin: 0 0 0;
+    transition: all 0.5s ease 0s;
+    width: 180px;
+    z-index: 99999;
+    background: #95e2f9e8 !important;
+    padding: 0;
+    left: 0;
+}
+
+nav ul li ul>li {
+    padding: 0;
+    display: block;
+    border-bottom: 1px solid #4a444a;
+}
+
+nav ul li ul>li>a {
+    padding: 10px 10px 10px 15px;
+    display: block;
+    color: #ffffff;
+}
+
+nav ul li ul>li:last-child {
+    border-bottom: none;
+}
+
+nav ul li ul>li:hover {
+    background: #d39fd3;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+
+nav ul li ul>li:hover a {
+    color: #ffffff;
+}
+
+nav ul li ul>li:hover a:before {
+    opacity: 0;
+}
+
+nav ul li:hover ul {
+    opacity: 1;
+    transform: scaleY(1);
+    visibility: visible;
+}
+
+nav ul li .mega-menu-area {
+    padding: 18px 35px;
+    width: 688px;
+    left: -208px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    nav ul li .mega-menu-area {
+        left: -324px;
+    }
+}
+
+nav ul li .mega-menu-area>li {
+    width: 141px;
+    border-bottom: none;
+    display: inline-block;
+    margin-right: 14px;
+}
+
+nav ul li .mega-menu-area>li:hover {
+    background: transparent!important;
+}
+
+nav ul li .mega-menu-area>li:hover>a {
+    color: #ffffff;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+
+nav ul li .mega-menu-area>li:hover>a:hover {
+    color: #ffffff;
+    background: #d32f2f;
+    padding-left: 10px;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+
+nav ul li .mega-menu-area>li a {
+    padding: 8px 0;
+    display: block;
+    border-bottom: 1px solid #433d3d;
+}
+
+nav ul li .mega-menu-area>li a:last-child {
+    border-bottom: none;
+}
+
+nav ul li .mega-menu-area>li:last-child {
+    margin-right: 0;
+}
+
+nav ul li:hover>a,
+nav ul .active>a {
+    position: relative;
+}
+
+nav ul li:hover>a:before,
+nav ul .active>a:before {
+    opacity: 1;
+    width: 57%;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+
+.wrapper {
+    width: 500px;
+    background: #f1f1f1;
+    height: 550px;
+    border-radius: 1px;
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    padding: 20px 20px 20px 20px;
+}
+
+.wrapper .title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #31302d;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.wrapper .contact-form {
+    width: 100%;
+}
+
+.wrapper .contact-form .inputfield {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.wrapper .contact-form .inputfield label {
+    width: 200px;
+    color: #757575;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.wrapper .contact-form .inputfield .input,
+.wrapper .contact-form .inputfield .textarea {
+    width: 100%;
+    outline: none;
+    border: 1px solid #d5dbd9;
+    font-size: 15px;
+    padding: 8px 10px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.wrapper .contact-form .inputfield .textarea {
+    width: 100%;
+    height: 125px;
+    resize: none;
+}
+
+.wrapper .contact-form .inputfield .custom_select:before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    border: 1px solid;
+    border-color: #d5dbd9 transparent transparent transparent;
+    pointer-events: none;
+}
+
+.wrapper .contact-form .inputfield .custom_select select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    width: 160%;
+    height: 100%;
+    padding: 8px 10px;
+    font-size: 15px;
+    border: 1px solid #d5dbd9;
+}
+
+.wrapper .contact-form .inputfield .input:focus,
+.wrapper .contact-form .inputfield .textarea:focus,
+.wrapper .contact-form .inputfield .custom_select select:focus {
+    border: 1px solid #fec107;
+}
+
+.wrapper .contact-form .inputfield:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width:420px) {
+    .wrapper .contact-form .inputfield {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .wrapper .contact-form .inputfield label {
+        margin-bottom: 5px;
+    }
+    .wrapper .contact-form .inputfield.terms {
+        flex-direction: row;
+    }
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .btn {
+    background: #b7a7a7;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 200px;
+}
+
+.container .btn:hover {
+    background: #c3b388;
+}
+
+.container .popup {
+    width: 400px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.container .open-popup {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1.4);
+}
+
+.container .popup img {
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+.container .popup button {
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #6fd649;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
