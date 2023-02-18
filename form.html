@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <!-- custom styles -->
+    <link href="./css/form.css" rel="stylesheet">
+    <title>Form</title>
+</head>
+
+<body>
+    <!-- header start -->
+    <div class="header">
+        <!-- navbar start -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="nav-content container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img class="d-inline-block align-top" src="./static/205ffe047d5b.png " class="brand-logo" href="index.html">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navSupportedContent" aria-controls="navSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="main-menu collapse navbar-collapse" id="navSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="mission.html">Our Mission</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="navbarDropdownMenuLink" role="button" aria-expanded="false">Our Services </a>
+                            <ul>
+                                <li><a href="Horn.html">Horn Products</a></li>
+                                <li><a href="wood.html">Wood Products</a></li>
+                                <li><a href="bone.html">Bone Products</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+
+
+                </div>
+
+            </div>
+        </nav>
+    </div>
+
+    <div class="wrapper">
+        <div class="title">
+            <h1>Contact Details</h1>
+        </div>
+        <form class="contact-form" action="connect.php" method="post">
+            <div class="inputfield">
+                <label for="name"><b>Full Name</b></label>
+                <input class="input" type="text" placeholder="Enter Full Name" id="fullName" name="fullName" required>
+            </div>
+            <div class="inputfield">
+                <label for="email"><b>Email</b></label>
+                <input class="input" type="text" placeholder="Enter Email" id="email" name="email" required>
+            </div>
+            <div class="inputfield">
+                <label for="name"><b>Mobile Number</b></label>
+                <input class="input" type="text" placeholder="Enter Mobile Number" id="mobilenumber" name="mobilenumber" required>
+            </div>
+            <div class="inputfield">
+                <label><b>Products</b></label>
+                <div class="custom_select">
+                    <select>
+                        <option value="">Select</option>
+                        <option value="horn" name="products" id="horn">Horn Products</option>
+                        <option value="wood" name="products" id="wood">Wood Products</option>
+                        <option value="bone" name="products" id="bone">Bone Products</option>
+                    </select>
+                </div>
+            </div>
+            <div class="inputfield">
+                <label for="address"><b>Address</b></label>
+                <textarea class="textarea" id="address" name="address" required></textarea>
+            </div>
+            <div class="inputfield">
+                <label><b>Postal Code</b></label>
+                <input type="text" class="input" placeholder="Enter Postal Code" id="pin" name="pin" required>
+            </div>
+            <div class="container">
+                <button type="submit" class="btn" onclick="openPopup()">Submit</button>
+                <div class="popup" id="popup">
+                    <img src="./static/404-tick.png" alt="">
+                    <h4>Thank You for Submitting the Order!</h4>
+                    <p>We'll Contact you soon.</p>
+                    <button type="button" onclick="closePopup()">OK</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script>
+        let popup = document.getElementById("popup");
+
+        function openPopup() {
+            popup.classList.add("open-popup");
+        }
+
+        function closePopup() {
+            popup.classList.remove("open-popup");
+        }
+    </script>
+</body>
+
+</html>
